@@ -1,4 +1,4 @@
-
+from random import randint
 
 # data types
 
@@ -6,6 +6,7 @@
 # 2. float
 # 3. bool
 # 4. str
+
 # 5. list
 # 6. tuple
 # 7. set
@@ -84,7 +85,7 @@ print(a)
 print(type(a))
 
 
-# Arithmatic operators
+# arithmatic operators
 
 # +	Addition	x + y
 # -	Subtraction	x - y
@@ -141,92 +142,3 @@ print(x > 3 and x < 10)
 print(x > 3 or x < 4)
 print(not(x > 3 and x < 10))
 
-
-# conditional logic
-
-x=1
-print(x==1) # True
-print(x is 1) # True
-print(x is not 1) # False
-
-# important note , falsy values in python
-# False, None, 0, "", (), [], {}
-# all other values are truthy values
-
-# Example-1
-x = 1
-y = 10
-if x > y:
-    print("x is greater than y")
-else:
-    print("y is greater than x")
-
-
-# Example-2
-
-v=None
-if v:
-    print("v is truthy")
-
-
-# Example-3
-x = ""
-if x:
-    print("x is truthy")
-else:
-    print("x is falsy")
-
-
-# Example-4
-x = 0
-if x:
-    print("x is truthy")
-else:
-    print("x is falsy")
-
-
-# Example-5
-x=10
-if x:
-    print("x is truthy")
-else:
-    print("x is falsy")
-
-
-
-# Ex1
-    
-color = input("What's your favorite color?")
-if color == 'purple':
-	print("excellent choice!")
-elif color == 'teal':
-    print("not bad!")
-elif color == 'seafoam':
-    print("mediocre")
-elif color == 'pure darkness':
-    print("I like how you think")
-else: 
-	print("YOU MONSTER!") 
-     
-# Ex2
-     
-animal = input("enter your favorite animal")
-
-if animal:
-    print(animal + " is my favorite too!")
-else:
-	print("YOU DIDNT SAY ANYTHING!")     
-     
-
-# Ex3
-age = input("How old are you: ")
-if age:
-    age = int(age)
-    if age >= 21:
-        print("You are good to go and can drink")
-    elif age >= 18:
-        print("You can enter, but need a wristband!")
-    else:
-        print("You can't come in, little one! :(")
-else:
-    print("Please enter an age!")        

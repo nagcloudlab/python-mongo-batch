@@ -1,0 +1,9 @@
+
+variables
+https://python.slides.com/colt/oop-21
+boolean & conditonal logic
+https://python.slides.com/colt/variables-and-data-types
+loops
+https://python.slides.com/colt/functions-part-1
+lists
+https://python.slides.com/colt/lists-13
