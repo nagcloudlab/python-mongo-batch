@@ -7,10 +7,13 @@ csvReport=[
     "Emp5",5000.00,"Dep3",
 ]
 
-# find total salary of each department
+# find total salary of each department 
 
-# e.g
+depSal = {}
+for i in range(0,len(csvReport),3):
+    if csvReport[i+2] in depSal:
+        depSal[csvReport[i+2]] += csvReport[i+1]
+    else:
+        depSal[csvReport[i+2]] = csvReport[i+1]
+print(depSal)
 
-# Dep1: 4000.00
-# Dep2: 2000.00
-# Dep3: 5000.00
