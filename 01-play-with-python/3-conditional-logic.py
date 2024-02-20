@@ -38,6 +38,8 @@ else:
 x = 0
 if x:
     print("x is truthy")
+    if x is 0 and x is not None:
+        print("x is 0")
 else:
     print("x is falsy")
 
