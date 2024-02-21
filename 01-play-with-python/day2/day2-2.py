@@ -130,10 +130,10 @@ say_hello()
 
 # - A parameter of a function can be a function
 
-def greet(f=None):
+def greet(tbg=None):
     print("😊😊😊😊😊😊😊😊")
-    if f:
-        f()
+    if tbg:
+        tbg()
     else:    
         print("greetings")
     print("😊😊😊😊😊😊😊😊")

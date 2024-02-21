@@ -228,4 +228,3 @@ print(mytripler(11))  # Output: 33
 x = lambda a: a + 10
 
 print(x(5))  # Output: 15
-

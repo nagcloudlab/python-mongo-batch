@@ -7,3 +7,5 @@ loops
 https://python.slides.com/colt/functions-part-1
 lists
 https://python.slides.com/colt/lists-13
+functions
+https://python.slides.com/colt/lists-16
