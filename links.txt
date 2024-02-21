@@ -10,3 +10,5 @@ https://python.slides.com/colt/lists-13
 functions
 https://python.slides.com/colt/lists-16
 https://python.slides.com/colt/generators-and-decorators
+errors handling
+https://python.slides.com/colt/lists-24#/16/0/1
