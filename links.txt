@@ -12,5 +12,7 @@ https://python.slides.com/colt/lists-16
 https://python.slides.com/colt/generators-and-decorators
 errors handling
 https://python.slides.com/colt/lists-24#/16/0/1
+modules
+https://python.slides.com/colt/testing-25
 OOP
 https://python.slides.com/colt/lists-18
