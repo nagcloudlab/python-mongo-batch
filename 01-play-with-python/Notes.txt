@@ -1,5 +1,0 @@
-
-to build backend Apis alternative to REST api
-# tic-tac-toe game in angular
-
-
