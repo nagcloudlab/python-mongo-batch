@@ -1,0 +1,56 @@
+
+
+
+Object
+-----------
+
+    -> data/attribute/property/info -> State
+    -> function/operation/method/behaviour -> Behaviour
+    -> reference -> Identity
+
+    obj => sbi
+
+Class
+-----------
+
+    so we can create a blueprint for the object and create many objects from the blueprint
+
+    blueprint -> class
+    object -> instance
+
+----------------------------------------------------------------------------------
+Object Oriented Concepts
+----------------------------------------------------------------------------------
+
+1.  Interface / Abstracttion
+
+    -> easy to use / learn
+    -> to provide loose coupling between the dependent & dependency objects
+
+2. Implementation / Encapsulation
+
+    -> to hide the complexity of the object
+    -> to provide the security of the object
+
+3. Inheritance
+
+    -> re-use common state/behav from generalized-type to specialized-type
+
+4. Polymorphism
+
+    -> based on the context, the same object can behave differently
+
+----------------------------------------------------------------------------------
+how to create object?
+----------------------------------------------------------------------------------    
+
+
+2 steps
+
+    - dynamic memory allocation ( internal )
+    - intialize that memory with the data ( __init__ ) aka constructor
+
+
+----------------------------------------------------------------------------------
+
+
