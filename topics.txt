@@ -1,0 +1,6 @@
+
+
+- python virtual environment
+- SOLID principles
+
+- iterators, generators, decorators
