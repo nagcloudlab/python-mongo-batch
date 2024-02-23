@@ -1,0 +1,58 @@
+
+
+------------------
+python
+------------------
+
+- built-in data types (int, float, str, list, tuple, dict, set)
+- custom data types (class)
+- built-in functions (print, input, len, range, open, type, id, sum, max, min, abs, all, any, bin, hex, oct, chr, ord, round, pow, divmod, zip, enumerate, sorted, reversed, filter, map)
+- custom functions (def)
+- if, else, elif
+- for, while
+- modules
+- import, from, as
+- try, except, finally, raise
+- yield, lambda, return, pass, break, continue
+- list comprehension
+- dictionary comprehension
+- generator expression
+- decorators
+- iterators
+- generators
+- higher order functions
+- using hof as decorators
+- SOLID principles
+
+------------------------------------------------------------------
+
+python libraries
+
+- math
+- random
+- datetime
+- os
+- sys
+- json
+- re
+...
+
+------------------------------------------------------------------
+
+python web development libraries
+
+- flask
+
+------------------------------------------------------------------
+
+python with mongodb
+
+- pymongo
+
+------------------------------------------------------------------
+
+big data
+
+- pyspark
+
+------------------------------------------------------------------

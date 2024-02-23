@@ -16,3 +16,5 @@ modules
 https://python.slides.com/colt/testing-25
 OOP
 https://python.slides.com/colt/lists-18
+itrators | generators | decorators
+https://python.slides.com/colt/lists-14#/22
