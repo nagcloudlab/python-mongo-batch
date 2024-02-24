@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+
+<body>
+    <img src="static/flask-logo.png" />
+    Welcome to the website! {{ name}} {{date}}
+
+
+    {% for user in users %}
+    <p>
+        id : {{ user.id }} <br>
+        name : {{ user.name }} <br>
+        age : {{ user.age }} <br>
+        <button>
+            <a href="{{url_for('users',index=user.id-1)}}">View</a>
+        </button>
+    </p>
+    {% endfor %}
+
+</body>
+
+</html>

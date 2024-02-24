@@ -1,6 +1,0 @@
-
-
-- python virtual environment
-- SOLID principles
-- python magic methods
-- iterators, generators, decorators

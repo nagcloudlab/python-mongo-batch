@@ -43,3 +43,24 @@ for any programming language, you need to learn the following:
 - debugging & testing
 
 ------------------------------------------------------------------
+
+
+
+types of applications you can build with Python:
+
+- web applications
+- desktop applications
+- scientific computing
+- data analysis
+- machine learning
+- artificial intelligence
+- game development
+- network programming
+- system administration
+- automation
+- robotics
+- IoT
+- blockchain
+- cloud computing
+
+------------------------------------------------------------------

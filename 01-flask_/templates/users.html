@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    user
+
+    id : {{ user.id }}
+    name : {{ user.name }}
+    age : {{ user.age }}
+    <!-- 
+    <button>
+        <a href="{{url_for('users',index=index-1)}}">Back</a>
+    </button> -->
+
+    {% if index < max_index %} <button>
+        <a href="{{url_for('users',index=index+1)}}">Next</a>
+        </button>
+        {% else %}
+        <button>
+            <a href="{{url_for('users',index=0)}}">Start Over</a>
+        </button>
+        {% endif %}
+
+
+        <button>
+            <a href="{{url_for('welcome')}}">Home</a>
+        </button>
+
+</body>
+
+</html>
