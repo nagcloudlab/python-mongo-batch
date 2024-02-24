@@ -10,5 +10,9 @@ def db_read():
         data = {}
     return data
 
+def db_write():
+    with open('todos.json', 'w') as f:
+        json.dump(todos, f)
+
 
 todos=db_read()

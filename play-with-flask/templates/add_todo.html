@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<hr />
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">Todo Form</div>
+            <div class="card-body">
+                <form action="{{url_for('handle_new_todo')}}" method="POST">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" name="title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea type="text" class="form-control" id="description" name="description"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Todo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

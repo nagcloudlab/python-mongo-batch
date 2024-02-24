@@ -16,17 +16,5 @@
         "title": "Learn JavaScript",
         "description": "Learn JavaScript from scratch",
         "status": "active"
-    },
-    {
-        "id": 4,
-        "title": "Learn React",
-        "description": "Learn React from scratch",
-        "status": "active"
-    },
-    {
-        "id": 5,
-        "title": "Learn Node",
-        "description": "Learn Node from scratch",
-        "status": "active"
     }
 ]
