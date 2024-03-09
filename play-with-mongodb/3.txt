@@ -1,0 +1,116 @@
+
+
+### insert product documents into mongodb collection
+
+```javascript
+db.products.insertMany([
+  {
+    name: "Samsung Galaxy S10",
+    price: 799.99,
+    category: "smartphones",
+    color: "black",
+    available: true
+  },
+  {
+    name: "iPhone 11",
+    price: 999.99,
+    category: "smartphones",
+    color: "black",
+    available: true
+  },
+  {
+    name: "Samsung Galaxy Tab S6",
+    price: 649.99,
+    category: "tablets",
+    color: "black",
+    available: true
+  },
+  {
+    name: "iPad Pro",
+    price: 799.99,
+    category: "tablets",
+    color: "black",
+    available: true
+  },
+  {
+    name: "MacBook Pro",
+    price: 1299.99,
+    category: "laptops",
+    color: "silver",
+    available: true
+  },
+  {
+    name: "Dell XPS 13",
+    price: 1199.99,
+    category: "laptops",
+    color: "silver",
+    available: true
+  }
+]);
+```
+
+### find all documents in the collection
+
+```javascript
+db.products.find({});
+db.products.find({price: 1199.99,color: "silver"});
+```
+
+### comparison operators
+
+```javascript
+db.products.find({price: {$gt: 799.99}});
+db.products.find({price: {$gte: 799.99}});
+db.products.find({price: {$lt: 799.99}});
+db.products.find({price: {$lte: 799.99}});
+db.products.find({price: {$ne: 799.99}});
+```
+
+### logical operators
+
+```javascript
+db.products.find({price: {$gt: 799.99, $lt: 1299.99}});
+db.products.find({$or: [{price: 799.99}, {price: 1199.99}]});
+db.products.find({$and: [{price: 799.99}, {color: "black"}]});
+```
+
+$elemMatch operator
+
+```javascript
+db.products.insertOne({
+  name: "Samsung Galaxy S10",
+  price: 799.99,
+  category: "smartphones",
+  color: ["black", "white"],
+  available: true
+});
+db.products.find({color: "black"});
+db.products.find({color: {$elemMatch: {$eq: "black"}}});
+
+```
+
+
+
+SQL databases
+
+select * from products;
+select name, price from products;
+
+MongoDB projections
+
+db.products.find({}, {name: true, price: true});
+db.products.find({}, {name: true, price: true, _id: false});
+db.products.find({}, {name: false, price: false, _id: false});
+
+### how many documents
+
+db.products.find({}).count();
+db.products.estimatedDocumentCount();
+
+### sorting
+
+db.products.find({}).sort({price: -1});
+
+### limit
+
+db.products.find({}).skip(3).limit(3);

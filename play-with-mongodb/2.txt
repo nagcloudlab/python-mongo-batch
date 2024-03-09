@@ -1,0 +1,135 @@
+
+
+
+mongodb update operators
+--------------------------
+
+
+$set
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $set: { <field1>: <value1>, ... } }
+)
+```
+
+$unset
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $unset: { <field1>: "", ... } }
+)
+```
+
+$inc
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $inc: { <field1>: <amount1>, ... } }
+)
+```
+
+$mul
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $mul: { <field1>: <number> } }
+)
+```
+
+$rename
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $rename: { <field1>: <newName1>, ... } }
+)
+```
+
+$min
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $min: { <field1>: <value1>, ... } }
+)
+```
+
+$max
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $max: { <field1>: <value1>, ... } }
+)
+```
+
+$currentDate
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $currentDate: { <field1>: <typeSpecification1>, ... } }
+)
+```
+
+array update operators
+
+$push
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $push: { <field1>: <value1>, ... } }
+)
+```
+
+$pushAll
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $pushAll: { <field1>: [ <value1>, <value2>, ... ] } }
+)
+```
+
+$addToSet
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $addToSet: { <field1>: <value1>, ... } }
+)
+```
+
+$pop
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $pop: { <field1>: <-1 | 1> } }
+)
+```
+
+$pull
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $pull: { <field1>: <value|condition>, ... } }
+)
+```
+
+$pullAll
+
+```javascript
+db.collection.update(
+   { <query selector> },
+   { $pullAll: { <field1>: [ <value1>, <value2>, ... ] } }
+)
+```
+
