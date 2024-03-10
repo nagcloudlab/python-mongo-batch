@@ -1,0 +1,20 @@
+
+
+
+mongod --replSet rs1 --port 40001 --dbpath /home/nag/python-mongo-batch/play-with-mongodb/replicaset/rs1/db1
+mongod --replSet rs1 --port 40002 --dbpath /home/nag/python-mongo-batch/play-with-mongodb/replicaset/rs1/db2
+mongod --replSet rs1 --port 40003 --dbpath /home/nag/python-mongo-batch/play-with-mongodb/replicaset/rs1/db3
+
+
+mongosh --port 40001
+
+rs.initiate()
+rs.status()
+rs.add("localhost:40002")
+rs.add("localhost:40003")
+rs.status()
+rs.conf()
+rs.remove("localhost:40003")
+rs.status()
+
+

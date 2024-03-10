@@ -1,0 +1,46 @@
+
+
+use testing
+
+for (i = 0; i < 200000; i++){
+  db.books.insertOne(
+    {
+      "i": i,
+      "author": "Author_" + i, "title": "Book title " + i,
+      "ISBN": Math.floor(Math.random() * 100000),
+      "created": new Date(),
+      "meta":
+      {
+        "price": Math.floor(Math.random() * 100),
+        "rating": Math.random() * 5
+      }
+    }
+  )
+}
+
+db.books.find({}).count()
+db.books.find({'title': 'Book title 45678'}).explain('executionStats')
+db.books.getIndexes()
+db.books.find({_id: ObjectId('65ed4eb42bcbeddaf1792cb0')})
+db.books.find({_id: ObjectId('65ed4eb42bcbeddaf1792cb0')}).explain('executionStats')
+
+db.books.createIndex({title: 1})
+db.books.dropIndex({ "title": 1 })
+db.books.dropIndex("title_1")
+
+Index types
+
+Single field index
+
+db.books.createIndex({title: 1})
+db.books.createIndex({ "title": 1 }, { "unique": true })
+db.books.createIndex({ "meta.price": 1 })
+db.books.createIndex({ "meta": 1 })
+
+db.books.find({'title': 'Book title 45678'}).explain('executionStats')
+db.books.find({'title': 'Book title 45678','meta.price':63}).explain('executionStats')
+
+Compound index
+
+db.books.createIndex({title: 1, author: 1})
+db.books.createIndex({title: 1, "meta.price": 1})
