@@ -1,0 +1,90 @@
+
+find document(s) from mongodb 
+
+javascript```
+db.users.find({})
+db.users.find({name: "John"})
+db.users.find({age: 25})
+db.users.find({name: "John", age: 25})
+db.users.find({age: {$gt: 25}})
+db.users.find({age: {$lt: 25}})
+```
+
+
+
+insert many todo documents into todos collection with type ( personal, work) and priority (high, low)
+
+javascript```
+db.todos.insertMany([
+    {name: "todo1", type: "personal", priority: "high"},
+    {name: "todo2", type: "work", priority: "low"},
+    {name: "todo3", type: "personal", priority: "low"},
+    {name: "todo4", type: "work", priority: "high"}
+])
+```
+
+group todos by type and count the number of todos in each group
+
+```javascript
+db.todos.aggregate([
+    {"$group": {_id: "$type",count: {"$sum": 1}}}
+])
+```
+
+
+
+javascript```
+db.todos.drop()
+db.users.drop()
+```
+
+
+insert users and todos data from the following json data
+
+```javascript
+db.users.insertMany([
+  {_id: 1, name: "John", age: 25},
+  {_id: 2, name: "Jane", age: 30}
+])
+
+db.todos.insertMany([
+    {name: "todo1", type: "personal", priority: "high", user_id: 1},
+    {name: "todo2", type: "work", priority: "low", user_id: 1},
+    {name: "todo3", type: "personal", priority: "low", user_id: 2},
+    {name: "todo4", type: "work", priority: "high", user_id: 2}
+])
+```
+
+
+find all todos with user name and age
+
+```javascript
+db.todos.aggregate([
+    {
+        $lookup: {
+            from: "users",
+            localField: "user_id",
+            foreignField: "_id",
+            as: "user"
+        }
+    },
+    {
+        $unwind: "$user"
+    },
+    {
+        $project: {
+            _id: 0,
+            name: 1,
+            type: 1,
+            priority: 1,
+            "user.name": 1,
+            "user.age": 1
+        }
+    }
+])
+```
+
+
+
+
+

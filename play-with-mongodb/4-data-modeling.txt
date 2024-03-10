@@ -1,0 +1,209 @@
+
+
+### nested/embedded document(s)
+
+- a document inside another document
+
+```json
+{
+  "name": "John",
+  "age": 30,
+  "address": {
+    "street": "123 Main St",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10001"
+  }
+}
+```
+
+- in the above example, `address` is a nested document inside the main document
+
+javascript```
+db.users.insertOne({
+  "name": "John",
+  "age": 30,
+  "address": {
+    "street": "123 Main St",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10001"
+  }
+})
+```
+
+
+### array of documents
+
+- an array of documents
+
+```json
+{
+  "name": "John",
+  "age": 30,
+  "hobbies":[
+    {"name": "hiking", "level": "beginner"},
+    {"name": "cooking", "level": "intermediate"}
+  ]
+}
+```
+
+- in the above example, `hobbies` is an array of documents
+
+```javascript
+db.users.insertOne({
+  "name": "Jane",
+  "age": 30,
+  "hobbies":[
+    {"name": "hiking", "level": "beginner"},
+    {"name": "cooking", "level": "intermediate"}
+  ]
+})
+```
+
+find user where name is "Jane"
+    
+```javascript
+db.users.find({name: "Jane"})
+```
+
+
+
+referenced document(s)
+
+- a document that references another document
+
+- e.g todo belongs to user
+
+```javascript
+db.users.insertOne({
+  _id: "user1",
+  "name": "John",
+  "age": 30
+})
+```
+
+```javascript
+db.todos.insertOne({
+  "user_id": "user1",
+  "title": "Learn MongoDB",
+  "completed": false
+})
+```
+
+find todo 
+
+```javascript
+db.todos.find({_id:ObjectId('65ed38262bcbeddaf1787a38')})
+db.users.find({_id:"user1"})
+``
+
+
+
+one to one with embedded document
+
+```javascript
+db.users.insertOne({
+  "name": "John",
+  "age": 30,
+  "address": {
+    "street": "123 Main St",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10001"
+  }
+})
+```
+
+one to many with embedded document
+
+```javascript
+db.users.insertOne({
+  "name": "John",
+  "age": 30,
+  "hobbies":[
+    {"name": "hiking", "level": "beginner"},
+    {"name": "cooking", "level": "intermediate"}
+  ]
+})
+```
+
+one to many with referenced document
+
+```javascript
+db.users.insertOne({
+  _id: "user1",
+  "name": "John",
+  "age": 30
+})
+```
+
+```javascript
+db.todos.insertOne({
+  "user_id": "user1",
+  "title": "Learn MongoDB",
+  "completed": false
+})
+```
+
+many to many with embedded document
+
+```javascript
+db.users.insertOne({
+  "name": "John",
+  "age": 30,
+  "hobbies":[
+    {"name": "hiking", "level": "beginner"},
+    {"name": "cooking", "level": "intermediate"}
+  ]
+})
+```
+
+```javascript
+db.hobbies.insertOne({
+  "name": "hiking",
+  "users":[
+    {"name": "John", "age": 30},
+    {"name": "Jane", "age": 25}
+  ]
+})
+```
+
+many to many with referenced document
+
+```javascript
+db.users.insertOne({
+  _id: "user1",
+  "name": "John",
+  "age": 30
+})
+```
+
+```javascript
+db.hobbies.insertOne({
+  "name": "hiking",
+  "users":[
+    {"user_id": "user1"},
+    {"user_id": "user2"}
+  ]
+})
+```
+
+
+
+prefer embedded document over referenced document at most
+
+- embedded document is faster to read
+- single read operation
+
+Else
+
+if document is too large, it is better to use referenced document
+if document need to exist independently, it is better to use referenced document
+if documents get updated frequently, it is better to use referenced document
+
+
+
+
+
+
