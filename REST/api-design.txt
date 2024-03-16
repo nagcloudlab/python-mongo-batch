@@ -1,0 +1,142 @@
+
+
+
+project : todos management system
+------------------------------------------
+
+
+desing REST 
+------------
+
+
+step-1 : identify resources
+
+    - todo
+    - project
+    - employee
+
+step-2 : know the relations between resources
+
+    - project has many todos
+    - employee has many todos
+    - todo has one project
+    - todo has one employee
+
+step-3 : define the endpoints
+
+    - /projects
+    - /projects/{id}
+    - /projects/{id}/todos
+    - /projects/{id}/todos/{id}
+    - /employees
+    - /employees/{id}
+    - /employees/{id}/todos
+    - /employees/{id}/todos/{id}
+    - /todos
+    - /todos/{id}
+
+step-4 : define the methods
+
+    - GET /projects
+    - GET /projects/{id}
+    - POST /projects
+    - PUT /projects/{id}
+    - DELETE /projects/{id}
+    - GET /projects/{id}/todos
+    - GET /projects/{id}/todos/{id}
+    - POST /projects/{id}/todos
+    - PUT /projects/{id}/todos/{id}
+    - DELETE /projects/{id}/todos/{id}
+    - GET /employees
+    - GET /employees/{id}
+    - POST /employees
+    - PUT /employees/{id}
+    - DELETE /employees/{id}
+    - GET /employees/{id}/todos
+    - GET /employees/{id}/todos/{id}
+    - POST /employees/{id}/todos
+    - PUT /employees/{id}/todos/{id}
+    - DELETE /employees/{id}/todos/{id}
+    - GET /todos
+    - GET /todos/{id}
+    - POST /todos
+    - PUT /todos/{id}
+    - DELETE /todos/{id}
+
+step-5 : define the request and response
+
+    - GET /projects
+        - request : none
+        - response : 
+            - 200 OK
+            - 201 Created
+            - 404 Not Found
+            - 500 Internal Server Error
+            - 503 Service Unavailable
+            - 504 Gateway Timeout
+            - 401 Unauthorized
+            - 403 Forbidden
+            - 400 Bad Request
+            - 405 Method Not Allowed
+            - 406 Not Acceptable
+            - 409 Conflict
+            - 412 Precondition Failed
+            - 415 Unsupported Media Type
+            - 416 Requested Range Not Satisfiable
+            - 417 Expectation Failed
+            - 418 I'm a teapot
+            - 422 Unprocessable Entity
+            - 423 Locked
+            - 424 Failed Dependency
+            - 426 Upgrade Required
+            - 428 Precondition Required
+            - 429 Too Many Requests
+            - 431 Request Header Fields Too Large
+            - 451 Unavailable For Legal Reasons
+            - 500 Internal Server Error
+            - 501 Not Implemented
+            - 502 Bad Gateway
+            - 503 Service Unavailable
+            - 504 Gateway Timeout
+            - 505 HTTP Version Not Supported
+            - 506 Variant Also Negotiates
+            - 507 Insufficient Storage
+            - 508 Loop Detected
+            - 510 Not Extended
+            - 511 Network Authentication Required
+            - 599 Network Connect Timeout Error
+            - 200 OK
+                - Content-Type : application/json
+                - Content-Type : application/xml
+                - Content-Type : application/yaml
+                - Content-Type : application/html
+                - Content-Type : application/pdf
+                - Content-Type : application/csv
+                - Content-Type : application/xls
+                - Content-Type : application/xlsx
+                - Content-Type : application/doc
+                - Content-Type : application/docx
+                - Content-Type : application/txt
+                - Content-Type : application/rtf
+                - Content-Type : application/zip
+                - Content-Type : application/rar
+                - Content-Type : application/tar
+                - Content-Type : application/gz
+                - Content-Type : application/bz2
+                - Content-Type : application/7z
+                - Content-Type : application/xz
+                - Content-Type : application/tar.gz
+                - Content-Type : application/tar.bz2
+                - Content-Type : application
+
+------------------------------------------
+
+HTT status codes
+
+    - 1xx : Informational
+    - 2xx : Success
+    - 3xx : Redirection
+    - 4xx : Client Error
+    - 5xx : Server Error
+
+------------------------------------------
