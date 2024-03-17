@@ -1,0 +1,90 @@
+
+-------------------------------
+main topics from python
+-------------------------------
+
+- operators
+- data types
+- control structures
+- loops
+- built-in functions
+- functions
+- data structures aka collections
+ - List
+ - Tuple
+ - Set
+ - Dictionary
+ - Comprehensions
+    - List Comprehensions
+    - Set Comprehensions
+    - Dictionary Comprehensions
+    - Generator Comprehensions
+
+- String Methods
+- understanding regular expressions
+- working directories
+- read files
+- write files
+- try, except, else, finally
+- classes & cbjects
+- inheritance
+- polymorphism
+- encapsulation
+- abstraction
+- magic methods ( dunder methods ) e.g __init__, __str__, __repr__, __add__, __sub__, __mul__, __div__, __eq__, __lt__, __gt__, __le__, __ge__, __ne__
+- Modules
+    - import
+    - from import
+    - as
+    - dir
+    - packages
+- Package Manager
+    - pip
+- Virtual Environment
+    - venv
+    - anaconda
+- Debugging
+    - pdb
+    - assert
+- Decorators
+- Context Managers
+    - with statement
+- Data classes
+
+
+----------------------------
+Unit Testing
+----------------------------
+
+- pytest
+
+
+---------------------------
+Web application development
+---------------------------
+
+- HTML
+- CSS
+- JavaScript
+
++
+
+- Flask
+- Django
+
+---------------------------
+Data Science
+---------------------------
+
+- Numpy
+- Pandas
+- Matplotlib
+
++
+
+- Machine Learning
+- Deep Learning
+- NLP
+
+---------------------------
+
